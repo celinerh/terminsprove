@@ -4,7 +4,7 @@ import { useToken } from "../contexts/TokenContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 
 function Menu({ setShowMenu }) {
   const { token, setToken } = useToken();

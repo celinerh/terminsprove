@@ -10,7 +10,7 @@ import useAsset from "../hooks/useAsset";
 import useClass from "../hooks/useClass";
 import useRatings from "../hooks/useRatings";
 import useUser from "../hooks/useUser";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 
 function ClassDetails() {
   const navigate = useNavigate();

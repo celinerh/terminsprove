@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 
 const useAsset = (assetId) => {
   const [asset, setAsset] = useState();

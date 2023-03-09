@@ -1,4 +1,4 @@
-import { apiUrl } from "../../utils/urls";
+import { apiUrl } from "../../utils/apiUrl";
 
 const handleClassSignUp = (userId, userToken, classId) => {
   fetch(`${apiUrl}/api/v1/users/${userId}/classes/${classId}`, {

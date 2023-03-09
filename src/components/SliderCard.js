@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useRatings from "../hooks/useRatings";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 import Ratings from "./Ratings";
 
 function SliderCard({ gymClass }) {

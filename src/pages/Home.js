@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import SliderCard from "../components/SliderCard";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 
 function Home() {
   const { classes, error, isPending } = useClasses();

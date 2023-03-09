@@ -1,4 +1,4 @@
-import { apiUrl } from "../../utils/urls";
+import { apiUrl } from "../../utils/apiUrl";
 
 const handleRate = (userId, userToken, classId, rating) => {
   return fetch(`${apiUrl}/api/v1/classes/${classId}/ratings`, {

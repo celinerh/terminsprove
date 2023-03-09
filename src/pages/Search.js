@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import useTrainers from "../hooks/useTrainers";
 import Navigation from "../components/Navigation";
 import SliderCard from "../components/SliderCard";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 
 function Search() {
   const [query, setQuery] = useState("");

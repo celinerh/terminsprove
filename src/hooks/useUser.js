@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useToken } from "../contexts/TokenContext";
-import { apiUrl } from "../utils/urls";
+import { apiUrl } from "../utils/apiUrl";
 
 const useUser = () => {
   const [user, setUser] = useState();

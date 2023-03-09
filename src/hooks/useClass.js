@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { apiUrl } from "../utils/apiUrl";
+import { apiUrl } from "../utils/urls";
 
 const useClass = () => {
   const [gymClass, setGymClass] = useState();

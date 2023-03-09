@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { apiUrl } from "../utils/apiUrl";
+import { apiUrl } from "../utils/urls";
 
 const useRatings = (classId) => {
   const [ratings, setRatings] = useState();

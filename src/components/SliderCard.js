@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useRatings from "../hooks/useRatings";
+import { apiUrl } from "../utils/urls";
 import Ratings from "./Ratings";
 
 function SliderCard({ gymClass }) {
@@ -10,7 +11,7 @@ function SliderCard({ gymClass }) {
       <Link to={`/classes/${gymClass.id}`}>
         <img
           className="h-36 w-32 object-cover rounded-lg"
-          src={gymClass.asset.url}
+          src={`${apiUrl}${gymClass.asset.url}`}
           alt={`${gymClass.className} workout class`}
           title={`${gymClass.className} workout class`}
         />

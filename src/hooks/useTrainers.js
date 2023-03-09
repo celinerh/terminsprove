@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiUrl } from "../utils/apiUrl";
 
 const useTrainers = () => {
   const [trainers, setTrainers] = useState();
@@ -6,7 +7,7 @@ const useTrainers = () => {
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/v1/trainers`, {
+    fetch(`${apiUrl}/api/v1/trainers`, {
       method: "GET",
     })
       .then((response) => {

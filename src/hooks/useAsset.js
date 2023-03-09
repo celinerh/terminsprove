@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiUrl } from "../utils/apiUrl";
 
 const useAsset = (assetId) => {
   const [asset, setAsset] = useState();
@@ -6,7 +7,7 @@ const useAsset = (assetId) => {
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/v1/assets/${assetId}`, {
+    fetch(`${apiUrl}/api/v1/assets/${assetId}`, {
       method: "GET",
     })
       .then((response) => {

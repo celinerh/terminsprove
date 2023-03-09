@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiUrl } from "../utils/apiUrl";
 
 const useClasses = () => {
   const [classes, setClasses] = useState();
@@ -6,7 +7,7 @@ const useClasses = () => {
   const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/v1/classes`, {
+    fetch(`${apiUrl}/api/v1/classes`, {
       method: "GET",
     })
       .then((response) => {

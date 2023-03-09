@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { apiUrl } from "../utils/apiUrl";
 
 const useRatings = (classId) => {
   const [ratings, setRatings] = useState();
@@ -6,7 +7,7 @@ const useRatings = (classId) => {
   const [isPending, setIsPending] = useState(true);
 
   const mutateRatings = () => {
-    fetch(`http://localhost:4000/api/v1/classes/${classId}/ratings`, {
+    fetch(`${apiUrl}/api/v1/classes/${classId}/ratings`, {
       method: "GET",
     })
       .then((response) => {

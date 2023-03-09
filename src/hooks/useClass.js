@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { apiUrl } from "../utils/apiUrl";
 
 const useClass = () => {
   const [gymClass, setGymClass] = useState();
@@ -8,7 +9,7 @@ const useClass = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/v1/classes/${id}`, {
+    fetch(`${apiUrl}/api/v1/classes/${id}`, {
       method: "GET",
     })
       .then((response) => {

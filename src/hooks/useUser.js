@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useToken } from "../contexts/TokenContext";
+import { apiUrl } from "../utils/apiUrl";
 
 const useUser = () => {
   const [user, setUser] = useState();
@@ -10,7 +11,7 @@ const useUser = () => {
   useEffect(() => {
     if (!token) return;
 
-    fetch(`http://localhost:4000/api/v1/users/${token.userId}`, {
+    fetch(`${apiUrl}/api/v1/users/${token.userId}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token.token}`,

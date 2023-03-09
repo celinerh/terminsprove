@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import SliderCard from "../components/SliderCard";
+import { apiUrl } from "../utils/urls";
 
 function Home() {
   const { classes, error, isPending } = useClasses();
@@ -24,7 +25,7 @@ function Home() {
           >
             <img
               className="row-span-full col-span-full h-full w-full object-cover rounded-lg"
-              src={classes[randomClassIndex].asset.url}
+              src={`${apiUrl}${classes[randomClassIndex].asset.url}`}
               alt={`${classes[randomClassIndex].className} workout class`}
               title={`${classes[randomClassIndex].className} workout class`}
             />

@@ -10,6 +10,7 @@ import useAsset from "../hooks/useAsset";
 import useClass from "../hooks/useClass";
 import useRatings from "../hooks/useRatings";
 import useUser from "../hooks/useUser";
+import { apiUrl } from "../utils/urls";
 
 function ClassDetails() {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ function ClassDetails() {
           <div className="grid grid-rows-1 grid-cols-1 h-1/2">
             <img
               className="row-span-full col-span-full h-full w-full object-cover"
-              src={gymClass.asset.url}
+              src={`${apiUrl}${gymClass.asset.url}`}
               alt={`${gymClass.className} workout class`}
               title={`${gymClass.className} workout class`}
             />

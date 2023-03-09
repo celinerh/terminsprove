@@ -1,5 +1,7 @@
+import { apiUrl } from "../../utils/urls";
+
 const handleRate = (userId, userToken, classId, rating) => {
-  return fetch(`http://localhost:4000/api/v1/classes/${classId}/ratings`, {
+  return fetch(`${apiUrl}/api/v1/classes/${classId}/ratings`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${userToken}`,

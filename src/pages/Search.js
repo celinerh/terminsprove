@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import useTrainers from "../hooks/useTrainers";
 import Navigation from "../components/Navigation";
 import SliderCard from "../components/SliderCard";
+import { apiUrl } from "../utils/urls";
 
 function Search() {
   const [query, setQuery] = useState("");
@@ -86,7 +87,7 @@ function Search() {
                     <Link to={``}>
                       <img
                         className="h-28 w-24 object-cover rounded-lg"
-                        src={trainer.asset.url}
+                        src={`${apiUrl}${trainer.asset.url}`}
                         alt={trainer.trainerName}
                         title={trainer.trainerName}
                       />

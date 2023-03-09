@@ -4,6 +4,7 @@ import { useToken } from "../contexts/TokenContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { apiUrl } from "../utils/urls";
 
 function Menu({ setShowMenu }) {
   const { token, setToken } = useToken();
@@ -29,7 +30,7 @@ function Menu({ setShowMenu }) {
   } = useForm({ mode: "onBlur", resolver: yupResolver(schema) });
 
   const onSubmit = (data) => {
-    fetch("http://localhost:4000/auth/token", {
+    fetch(`${apiUrl}/auth/token`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

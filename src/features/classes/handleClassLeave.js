@@ -1,5 +1,7 @@
+import { apiUrl } from "../../utils/urls";
+
 const handleClassLeave = (userId, userToken, classId) => {
-  fetch(`http://localhost:4000/api/v1/users/${userId}/classes/${classId}`, {
+  fetch(`${apiUrl}/api/v1/users/${userId}/classes/${classId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${userToken}`,
